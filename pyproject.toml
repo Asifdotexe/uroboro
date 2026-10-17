@@ -1,0 +1,40 @@
+[project]
+name = "uroboro"
+version = "0.1.0"
+license = "MPL-2.0"
+authors = [{ name = "Asif Sayyed", email = "asifdotexe@gmail.com" }]
+maintainers = [{ name = "Asif Sayyed", email = "asifdotexe@gmail.com" }]
+description = "Let python eat it's tail, python code re-visualiser"
+readme = "README.md"
+license-files = ["LICENSE"]
+requires-python = ">=3.12"
+dependencies = []
+
+[project.scripts]
+uroboro = "uroboro.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/Asifdotexe/uroboro"
+Repository = "https://github.com/Asifdotexe/uroboro"
+# Documentation = "https://uroboro.readthedocs.io/"
+"Issue Tracker" = "https://github.com/Asifdotexe/uroboro/issues"
+"Pull Requests" = "https://github.com/Asifdotexe/uroboro/pulls"
+# Changelog = "https://github.com/Asifdotexe/uroboro/blob/main/CHANGELOG.md"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "ruff>=0.16.9",
+    "pytest>=8.0.0",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W", "UP"]
+ignore = ["E501"]
